@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surat Keterangan - Kelurahan Teritip</title>
+    <!-- FontAwesome & Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #0a58ca;
+            --dark-color: #212529;
+            --light-bg: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-bg);
+            color: #333;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Hero Header */
+        .hero-header {
+            background: linear-gradient(135deg, #0d6efd 0%, #004085 100%);
+            color: white;
+            padding: 50px 0 35px;
+            text-align: center;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+
+        /* Service Cards */
+        .card-service {
+            border: none;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            background: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        .card-service:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-img-wrapper {
+            width: 100%;
+            height: 180px;
+            background-color: #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .card-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e293b;
+            color: #f1f5f9;
+            padding-top: 50px;
+            padding-bottom: 20px;
+            margin-top: 80px;
+        }
+
+        footer a {
+            color: #94a3b8;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+        }
+
+        .emergency-btn {
+            background: #ef4444;
+            color: white;
+            border-radius: 8px;
+            padding: 8px 12px;
+            display: inline-block;
+            margin-bottom: 8px;
+            width: 100%;
+            text-align: left;
+            text-decoration: none;
+        }
+
+        .emergency-btn:hover {
+            background: #dc2626;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGASI -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fa-solid fa-building-user me-2"></i>KELURAHAN TERITIP
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="pelayanan.html">Pelayanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tentangkelurahan.html">Tentang Kelurahan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="rukuntetangga.html">Rukun Tetangga</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fasum.html">Sarana & Prasarana</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://teritip.balikpapan.go.id/" target="_blank">Website Resmi</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER / HERO -->
+    <header class="hero-header">
+        <div class="container">
+            <h1 class="fw-bold">STANDAR PELAYANAN SURAT KETERANGAN</h1>
+            <p class="lead mb-3">Kelurahan Teritip, Kecamatan Balikpapan Timur - Kota Balikpapan</p>
+            <p class="small text-white-50">Berdasarkan Standar Pelayanan Kelurahan Teritip</p>
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-6">
+                    <input type="text" id="searchInput" class="form-control form-control-lg" placeholder="Cari surat keterangan (misal: Nikah, Waris, Domisili)...">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- KONTEN LAYANAN -->
+    <main class="container my-5">
+        <div class="row g-4" id="serviceCards">
+
+            <!-- Card 1: Belum Pernah Menikah -->
+            <div class="col-md-6 col-lg-4 service-item">
+                <div class="card card-service">
+                    <div class="card-img-wrapper">
+                        <img src="assets/img/belummenikah.png" alt="Suket Belum Pernah Menikah" onerror="this.onerror=null; this.src='https://placehold.co/400x250/0d6efd/ffffff?text=Belum+Pernah+Menikah';">
+                    </div>
+                    <div class="card-body d-flex flex-column p-4 text-center">
+                        <h5 class="card-title fw-bold">Surat Keterangan Belum Pernah Menikah</h5>
+                        <p class="card-text text-muted small">Pelayanan penerbitan surat keterangan status belum pernah menikah untuk keperluan administrasi.</p>
+                        <button class="btn btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#modalBelumMenikah">Lihat Persyaratan</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Berpenghasilan Tidak Tetap -->
+            <div class="col-md-6 col-lg-4 service-item">
+                <div class="card card-service">
+                    <div class="card-img-wrapper">
+                        <img src="assets/img/penghasilantidaktetap.png" alt="Suket Berpenghasilan Tidak Tetap" onerror="this.onerror=null; this.src='https://placehold.co/400x250/0d6efd/ffffff?text=Penghasilan+Tidak+Tetap';">
+                    </div>
+                    <div class="card-body d-flex flex-column p-4 text-center">
+                        <h5 class="card-title fw-bold">Surat Keterangan Berpenghasilan Tidak Tetap</h5>
+                        <p class="card-text text-muted small">Surat keterangan estimasi jumlah penghasilan rata-rata per bulan bagi pekerja sektor informal.</p>
+                        <button class="btn btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#modalPenghasilan">Lihat Persyaratan</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Domisili Luar Balikpapan -->
+            <div class="col-md-6 col-lg-4 service-item">
+                <div class="card card-service">
+                    <div class="card-img-wrapper">
+                        <img src="assets/img/domisililuarbalikpapan.png" alt="Suket Bertempat Tinggal KTP Luar" onerror="this.onerror=null; this.src='https://placehold.co/400x250/0d6efd/ffffff?text=Domisili+KTP+Luar';">
+                    </div>
+                    <div class="card-body d-flex flex-column p-4 text-center">
+                        <h5 class="card-title fw-bold">Surat Keterangan Bertempat Tinggal (KTP Luar)</h5>
+                        <p class="card-text text-muted small">Keterangan bertempat tinggal sementara untuk pemegang KTP dari luar Kota Balikpapan.</p>
+                        <button class="btn btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#modalDomisiliLuar">Lihat Persyaratan</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: Domisili Kelurahan Teritip -->
+            <div class="col-md-6 col-lg-4 service-item">
+                <div class="card card-service">
+                    <div class="card-img-wrapper">
+                        <img src="assets/img/domisilitetap.png" alt="Suket Domisili Teritip" onerror="this.onerror=null; this.src='https://placehold.co/400x250/0d6efd/ffffff?text=Domisili+Kelurahan+Teritip';">
+                    </div>
+                    <div class="card-body d-flex flex-column p-4 text-center">
+                        <h5 class="card-title fw-bold">Surat Keterangan Domisili (KTP Teritip)</h5>
+                        <p class="card-text text-muted small">Keterangan tempat tinggal domisili resmi bagi warga pemegang KTP Kelurahan Teritip.</p>
+                        <button class="btn btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#modalDomisili">Lihat Persyaratan</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5: Janda / Duda -->
+            <div class="col-md-6 col-lg-4 service-item">
+                <div class="card card-service">
+                    <div class="card-img-wrapper">
+                        <img src="assets/img/jandaduda.jpg" alt="Suket Janda Duda" onerror="this.onerror=null; this.src='https://placehold.co/400x250/0d6efd/ffffff?text=Janda+/+Duda';">
+                    </div>
+                    <div class="card-body d-flex flex-column p-4 text-center">
+                        <h5 class="card-title fw-bold">Surat Keterangan Janda / Duda</h5>
+                        <p class="card-text text-muted small">Surat keterangan status janda atau duda akibat adanya perceraian atau pasangan meninggal dunia.</p>
+                        <button class="btn btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#modalJandaDuda">Lihat Persyaratan</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6: Pemekaran Wilayah -->
+            <div class="col-md-6 col-lg-4 service-item">
+                <div class="card card-service">
+                    <div class="card-img-wrapper">
+                        <img src="assets/img/pemekaranwilayah.png" alt="Suket Pemekaran Wilayah" onerror="this.onerror=null; this.src='https://placehold.co/400x250/0d6efd/ffffff?text=Pemekaran+Wilayah';">
+                    </div>
+                    <div class="card-body d-flex flex-column p-4 text-center">
+                        <h5 class="card-title fw-bold">Surat Keterangan Pemekaran Wilayah</h5>
+                        <p class="card-text text-muted small">Keterangan penyesuaian alamat atau nomor RT akibat penataan & pemekaran wilayah administratif.</p>
+                        <button class="btn btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#modalPemekaran">Lihat Persyaratan</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 7: Orang Yang Sama -->
+            <div class="col-md-6 col-lg-4 service-item">
+                <div class="card card-service">
+                    <div class="card-img-wrapper">
+                        <img src="assets/img/orangyangsama.png" alt="Suket Orang Yang Sama" onerror="this.onerror=null; this.src='https://placehold.co/400x250/0d6efd/ffffff?text=Orang+Yang+Sama';">
+                    </div>
+                    <div class="card-body d-flex flex-column p-4 text-center">
+                        <h5 class="card-title fw-bold">Surat Keterangan Orang Yang Sama</h5>
+                        <p class="card-text text-muted small">Surat keterangan pembenaran identitas bagi warga yang memiliki perbedaan nama pada dokumen resmi.</p>
+                        <button class="btn btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#modalOrangSama">Lihat Persyaratan</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 8: Pengantar Nikah -->
+            <div class="col-md-6 col-lg-4 service-item">
+                <div class="card card-service">
+                    <div class="card-img-wrapper">
+                        <img src="assets/img/pengantarnikah.png" alt="Suket Pengantar Nikah" onerror="this.onerror=null; this.src='https://placehold.co/400x250/0d6efd/ffffff?text=Pengantar+Nikah';">
+                    </div>
+                    <div class="card-body d-flex flex-column p-4 text-center">
+                        <h5 class="card-title fw-bold">Surat Keterangan Pengantar Nikah</h5>
+                        <p class="card-text text-muted small">Surat pengantar rekomendasi pernikahan dari kelurahan untuk pendaftaran di KUA.</p>
+                        <button class="btn btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#modalPengantarNikah">Lihat Persyaratan</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 9: Ahli Waris -->
+            <div class="col-md-6 col-lg-4 service-item">
+                <div class="card card-service">
+                    <div class="card-img-wrapper">
+                        <img src="assets/img/waris.jpg" alt="Suket Ahli Waris" onerror="this.onerror=null; this.src='https://placehold.co/400x250/0d6efd/ffffff?text=Ahli+Waris';">
+                    </div>
+                    <div class="card-body d-flex flex-column p-4 text-center">
+                        <h5 class="card-title fw-bold">Surat Keterangan Ahli Waris</h5>
+                        <p class="card-text text-muted small">Keterangan resmi mengenai silsilah keluarga dan susunan para ahli waris dari pewaris.</p>
+                        <button class="btn btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#modalAhliWaris">Lihat Persyaratan</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- MODAL POPUP PERSYARATAN -->
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="modalBelumMenikah" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title"><i class="fa-solid fa-file-contract me-2"></i>Persyaratan Suket Belum Pernah Menikah</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <ol class="lh-lg">
+                        <li>Surat Pengantar RT setempat;</li>
+                        <li>Fotokopi KTP dan Kartu Keluarga (KK) Pemohon;</li>
+                        <li>Surat Pernyataan Belum Pernah Menikah bermaterai Rp 10.000 <a href="#" target="_blank" class="badge bg-success text-decoration-none">(Download Form)</a>;</li>
+                        <li>Fotokopi KTP 2 (dua) orang saksi yang dicantumkan dalam surat pernyataan.</li>
+                    </ol>
+                    <hr>
+                    <p class="mb-0 text-muted small"><i class="fa-solid fa-circle-info me-1"></i> Permohonan dapat diajukan via <a href="https://yankel.balikpapan.go.id/" target="_blank">Aplikasi Pelayanan Online (YANKEL)</a> atau datang langsung ke Kantor Kelurahan Teritip.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal fade" id="modalPenghasilan" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title"><i class="fa-solid fa-file-contract me-2"></i>Persyaratan Suket Penghasilan Tidak Tetap</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <ol class="lh-lg">
+                        <li>Surat Pengantar RT setempat;</li>
+                        <li>Fotokopi KTP dan Kartu Keluarga (KK) Pemohon;</li>
+                        <li>Surat Pernyataan Berpenghasilan Tidak Tetap bermaterai Rp 10.000 <a href="#" target="_blank" class="badge bg-success text-decoration-none">(Download Form)</a>;</li>
+                        <li>Fotokopi KTP 2 (dua) orang saksi yang tercantum dalam surat pernyataan.</li>
+                    </ol>
+                    <hr>
+                    <p class="mb-0 text-muted small"><i class="fa-solid fa-circle-info me-1"></i> Permohonan dapat diajukan via <a href="https://yankel.balikpapan.go.id/" target="_blank">Aplikasi Pelayanan Online (YANKEL)</a> atau datang langsung ke Kantor Kelurahan Teritip.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal fade" id="modalDomisiliLuar" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title"><i class="fa-solid fa-file-contract me-2"></i>Persyaratan Suket Bertempat Tinggal (KTP Luar)</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <ol class="lh-lg">
+                        <li>Surat Pengantar RT setempat;</li>
+                        <li>Fotokopi KTP dan Kartu Keluarga (KK) Pemohon;</li>
+                        <li>Surat Keterangan Kuliah / Kerja / KK Penjamin;</li>
+                        <li>Pas Foto Pemohon Ukuran 3x4 Sebanyak 2 Lembar (Latar belakang warna merah).</li>
+                    </ol>
+                    <hr>
+                    <p class="mb-0 text-muted small"><i class="fa-solid fa-circle-info me-1"></i> Permohonan dapat diajukan via <a href="https://yankel.balikpapan.go.id/" target="_blank">Aplikasi Pelayanan Online (YANKEL)</a> atau datang langsung ke Kantor Kelurahan Teritip.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="modal fade" id="modalDomisili" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title"><i class="fa-solid fa-file-contract me-2"></i>Persyaratan Suket Domisili (KTP Teritip)</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <ol class="lh-lg">
+                        <li>Surat Pengantar RT setempat;</li>
+                        <li>Fotokopi KTP dan Kartu Keluarga (KK) Pemohon.</li>
+                    </ol>
+                    <hr>
+                    <p class="mb-0 text-muted small"><i class="fa-solid fa-circle-info me-1"></i> Permohonan dapat diajukan via <a href="https://yankel.balikpapan.go.id/" target="_blank">Aplikasi Pelayanan Online (YANKEL)</a> atau datang langsung ke Kantor Kelurahan Teritip.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div class="modal fade" id="modalJandaDuda" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title"><i class="fa-solid fa-file-contract me-2"></i>Persyaratan Suket Janda / Duda</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <ol class="lh-lg">
+                        <li>Surat Pengantar RT setempat;</li>
+                        <li>Fotokopi KTP dan Kartu Keluarga (KK) Pemohon;</li>
+                        <li>Fotokopi Akta Cerai atau Akta Kematian Suami/Istri;</li>
+                        <li>Surat Pernyataan sebagai Janda/Duda dan belum menikah lagi yang ditandatangani 2 orang saksi <a href="#" target="_blank" class="badge bg-success text-decoration-none">(Download Form)</a>;</li>
+                        <li>Fotokopi KTP 2 (dua) orang saksi yang dicantumkan dalam surat pernyataan.</li>
+                    </ol>
+                    <hr>
+                    <p class="mb-0 text-muted small"><i class="fa-solid fa-circle-info me-1"></i> Permohonan dapat diajukan via <a href="https://yankel.balikpapan.go.id/" target="_blank">Aplikasi Pelayanan Online (YANKEL)</a> atau datang langsung ke Kantor Kelurahan Teritip.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 6 -->
+    <div class="modal fade" id="modalPemekaran" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title"><i class="fa-solid fa-file-contract me-2"></i>Persyaratan Suket Pemekaran Wilayah</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <ol class="lh-lg">
+                        <li>Surat Pengantar RT setempat;</li>
+                        <li>Fotokopi KTP dan Kartu Keluarga (KK) Pemohon;</li>
+                        <li>Fotokopi Sertifikat Tanah;</li>
+                        <li>Fotokopi SPPT PBB Terakhir.</li>
+                    </ol>
+                    <hr>
+                    <p class="mb-0 text-muted small"><i class="fa-solid fa-circle-info me-1"></i> Permohonan dapat diajukan via <a href="https://yankel.balikpapan.go.id/" target="_blank">Aplikasi Pelayanan Online (YANKEL)</a> atau datang langsung ke Kantor Kelurahan Teritip.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 7 -->
+    <div class="modal fade" id="modalOrangSama" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title"><i class="fa-solid fa-file-contract me-2"></i>Persyaratan Suket Orang Yang Sama</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <ol class="lh-lg">
+                        <li>Surat Pengantar RT setempat;</li>
+                        <li>Fotokopi KTP dan Kartu Keluarga (KK) Pemohon;</li>
+                        <li>Surat Pernyataan yang dibuat oleh pemohon dengan dibubuhi materai Rp 10.000;</li>
+                        <li>Fotokopi KTP 2 (dua) orang saksi yang dicantumkan dalam surat pernyataan;</li>
+                        <li>Dokumen pendukung lainnya yang memuat perbedaan identitas seperti: Ijazah, KTP, KK, Akta Kelahiran, dll.</li>
+                    </ol>
+                    <hr>
+                    <p class="mb-0 text-muted small"><i class="fa-solid fa-circle-info me-1"></i> Permohonan dapat diajukan via <a href="https://yankel.balikpapan.go.id/" target="_blank">Aplikasi Pelayanan Online (YANKEL)</a> atau datang langsung ke Kantor Kelurahan Teritip.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 8 -->
+    <div class="modal fade" id="modalPengantarNikah" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title"><i class="fa-solid fa-file-contract me-2"></i>Persyaratan Suket Pengantar Nikah</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <ol class="lh-lg">
+                        <li>Surat Pengantar RT setempat;</li>
+                        <li>Fotokopi KTP dan KK Pemohon;</li>
+                        <li>Fotokopi KTP dan KK Orang Tua Pemohon;</li>
+                        <li>Fotokopi Akta Kelahiran atau Ijazah Pemohon;</li>
+                        <li>Surat Pernyataan untuk Menikah dibubuhi materai Rp 10.000 <a href="#" target="_blank" class="badge bg-success text-decoration-none">(Download Form)</a>;</li>
+                        <li>Fotokopi KTP Saksi sesuai yang tertera dalam Surat Pernyataan;</li>
+                        <li>Fotokopi Akta Cerai atau Akta Kematian Suami/Istri (jika duda/janda);</li>
+                        <li>Pas Foto Pemohon Ukuran 2x3 sebanyak 2 lembar (Latar belakang biru);</li>
+                        <li>Pas Foto Calon Pasangan Ukuran 2x3 sebanyak 1 lembar (Latar belakang biru).</li>
+                    </ol>
+                    <hr>
+                    <p class="mb-0 text-muted small"><i class="fa-solid fa-circle-info me-1"></i> Permohonan dapat diajukan via <a href="https://yankel.balikpapan.go.id/" target="_blank">Aplikasi Pelayanan Online (YANKEL)</a> atau datang langsung ke Kantor Kelurahan Teritip.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 9 -->
+    <div class="modal fade" id="modalAhliWaris" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title"><i class="fa-solid fa-file-contract me-2"></i>Persyaratan Suket Ahli Waris</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <ol class="lh-lg">
+                        <li>Surat Pengantar RT setempat;</li>
+                        <li>Fotokopi KTP dan KK Seluruh Ahli Waris;</li>
+                        <li>Fotokopi Akta Kelahiran Seluruh Ahli Waris;</li>
+                        <li>Fotokopi Akta Kematian Pewaris;</li>
+                        <li>Fotokopi Buku Nikah Pewaris;</li>
+                        <li>Fotokopi KTP 2 (dua) orang saksi (Minimal berusia 35 tahun);</li>
+                        <li>Surat Keterangan Orang yang sama apabila terdapat perbedaan data identitas;</li>
+                        <li>Bagan Silsilah Keluarga (Mengetahui RT setempat).</li>
+                    </ol>
+                    <hr>
+                    <p class="mb-0 text-muted small"><i class="fa-solid fa-circle-info me-1"></i> Permohonan dapat diajukan via <a href="https://yankel.balikpapan.go.id/" target="_blank">Aplikasi Pelayanan Online (YANKEL)</a> atau datang langsung ke Kantor Kelurahan Teritip.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="fw-bold text-white mb-3"><i class="fa-solid fa-location-dot me-2"></i>Kontak Kami</h5>
+                    <p class="small text-muted mb-2">
+                        <strong>Kantor Kelurahan Teritip</strong><br>
+                        Jl. Mulawarman, Kelurahan Teritip, Kecamatan Balikpapan Timur, Kota Balikpapan, Kalimantan Timur 76116.
+                    </p>
+                    <p class="small text-muted mb-1"><i class="fa-brands fa-whatsapp me-2"></i><a href="https://wa.me/628123456789" target="_blank">+62 812-3456-789 (WhatsApp Pelayanan)</a></p>
+                    <p class="small text-muted mb-1"><i class="fa-solid fa-envelope me-2"></i>kel.teritip@balikpapan.go.id</p>
+                    <p class="small text-muted mb-1"><i class="fa-brands fa-instagram me-2"></i><a href="https://www.instagram.com/kelurahan_teritip/" target="_blank">@kelurahan_teritip</a></p>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="fw-bold text-white mb-3"><i class="fa-solid fa-triangle-exclamation me-2"></i>Kontak Darurat Balikpapan</h5>
+                    <a href="tel:112" class="emergency-btn">
+                        <i class="fa-solid fa-phone-volume me-2"></i> Call Center Emergency 112
+                    </a>
+                    <a href="tel:0542791941" class="emergency-btn">
+                        <i class="fa-solid fa-fire-extinguisher me-2"></i> BPBD Balikpapan (Bencana / Kebakaran)
+                    </a>
+                    <a href="https://wa.me/6281545100197" target="_blank" class="emergency-btn">
+                        <i class="fa-solid fa-shield-halved me-2"></i> Satpol PP Balikpapan
+                    </a>
+                    <a href="tel:119" class="emergency-btn">
+                        <i class="fa-solid fa-truck-medical me-2"></i> Ambulans PSC 119
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <h5 class="fw-bold text-white mb-3"><i class="fa-solid fa-globe me-2"></i>Layanan Publik & Terkait</h5>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="https://yankel.balikpapan.go.id/" target="_blank"><i class="fa-solid fa-angle-right me-2"></i>Aplikasi Pelayanan Online Kelurahan (YANKEL)</a></li>
+                        <li class="mb-2"><a href="https://teritip.balikpapan.go.id/" target="_blank"><i class="fa-solid fa-angle-right me-2"></i>Portal Resmi Kelurahan Teritip</a></li>
+                        <li class="mb-2"><a href="https://balikpapan.go.id/" target="_blank"><i class="fa-solid fa-angle-right me-2"></i>Website Resmi Kota Balikpapan</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="my-4 border-secondary">
+            <div class="text-center small text-muted">
+                <p class="mb-0">&copy; 2026 Kelurahan Teritip - Kota Balikpapan. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Bootstrap & Script Pencarian -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Fitur Filter / Pencarian Layanan Real-time
+        document.getElementById('searchInput').addEventListener('keyup', function() {
+            let filter = this.value.toLowerCase();
+            let cards = document.querySelectorAll('.service-item');
+
+            cards.forEach(function(card) {
+                let title = card.querySelector('.card-title').textContent.toLowerCase();
+                let desc = card.querySelector('.card-text').textContent.toLowerCase();
+                if (title.includes(filter) || desc.includes(filter)) {
+                    card.style.display = "";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
